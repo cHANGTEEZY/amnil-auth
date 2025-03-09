@@ -15,12 +15,17 @@ const authenticate = async (formData) => {
     );
 
     if (!response.ok) {
-      throw new Error("User with given credentials does not exist");
+      throw new Error("Something went wrong while checking credentials.");
     }
 
     const data = await response.json();
+    if (data.length === 0) {
+      throw new Error("User with given credentials does not exist");
+    }
     alert("Logging in");
-    localStorage.setItem("userId", data.id);
+
+    localStorage.setItem("token", data[0].id);
+    window.location.href = "/";
   } catch (error) {
     alert(error.message);
     console.error(error.message || "Something went wrong");

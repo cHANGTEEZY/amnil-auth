@@ -3,7 +3,10 @@ import authenticate from "../utils/authenticate.js";
 
 const signIn = document.getElementById("submit");
 
-signIn.addEventListener("click", async () => {
+signIn.addEventListener("click", async (e) => {
+  e.preventDefault();
   const formData = signInFormData();
-  console.log(await authenticate(formData));
+  if (formData) {
+    authenticate(formData);
+  }
 });

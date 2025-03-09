@@ -5,10 +5,23 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
+    <link rel="stylesheet" href="./src/style.css" />
   </head>
   <body>
-    <h1>Hello</h1>
-    <div id="app"></div>
+    <header>
+      <nav class="navbar">
+        <p class="logo">AMNIL Technology</p>
+        <div class="navbar-right">
+          <img src="./public/forest.jpg" alt="Profile" class="profile-pic" />
+          <button type="button" class="logout-button" id="logout">
+            Logout
+          </button>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="welcome"></div>
+    </main>
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>

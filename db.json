@@ -1,22 +1,3 @@
 {
-  "user": [
-    {
-      "id": "7a67",
-      "email": "test@gmail.com",
-      "password": "ASDASD",
-      "confirmPassword": "ASDASD"
-    },
-    {
-      "id": "5069",
-      "email": "te1st@gmail.com",
-      "password": "ASDASD",
-      "confirmPassword": "ASDASD"
-    },
-    {
-      "id": "6b76",
-      "email": "test123@gmail.com",
-      "password": "sUSHANK",
-      "confirmPassword": "sUSHANK"
-    }
-  ]
+  "user": []
 }

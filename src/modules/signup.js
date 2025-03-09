@@ -18,8 +18,9 @@ submit.addEventListener("click", async (e) => {
       return;
     }
     try {
-      const userData = await createUser(formData);
-      alert("User created successfully", userData);
+      const response = await createUser(formData);
+      console.log(response);
+      // window.location.href = "http://127.0.0.1:5500/src/pages/signin.html";
     } catch (error) {
       alert(error.message || "Something went wrong");
     }

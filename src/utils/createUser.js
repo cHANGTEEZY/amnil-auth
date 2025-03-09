@@ -9,12 +9,11 @@ const createUser = async (formData) => {
     });
 
     const data = await response.json();
-
     if (!response.ok) {
       throw new Error("Failed creating user", data);
     }
 
-    return data;
+    return "User Created Successfully";
   } catch (error) {
     throw new Error(error || "Something went wrong");
   }
