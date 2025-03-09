@@ -5,6 +5,7 @@
   padding: 20px;
 }
 
+.login-card,
 .signup-card {
   display: flex;
   background-color: white;
@@ -14,17 +15,27 @@
   max-height: 90vh;
 }
 
+.illustration-container,
+.form-container {
+  width: 600px;
+}
+
+/* Illustration Side */
 .illustration-container {
-  flex: 1;
   background-color: #dad7d7;
   position: relative;
   padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-image: url("../../public/forest.jpg");
+  background-size: contain;
 }
 
 .logo {
   font-size: 1.5rem;
   font-weight: 700;
-  color: #000000;
+  color: #b9b9b9;
   margin-bottom: 20px;
 }
 
@@ -34,8 +45,8 @@
   object-fit: contain;
 }
 
+/* Form Side */
 .form-container {
-  flex: 1;
   padding: 40px;
   display: flex;
   flex-direction: column;
@@ -65,7 +76,6 @@ label {
   align-items: center;
   border: 1px solid #e0e0e0;
   border-radius: 8px;
-  overflow: hidden;
 }
 
 .input-icon {
@@ -96,6 +106,7 @@ input:focus {
   font-size: 0.9rem;
 }
 
+.login-button,
 .signup-button {
   background-color: #ff5c87;
   color: white;
@@ -109,6 +120,7 @@ input:focus {
   margin-bottom: 30px;
 }
 
+.login-button:hover,
 .signup-button:hover {
   background-color: #ff3a6f;
 }
@@ -132,7 +144,8 @@ input:focus {
   font-size: 0.9rem;
 }
 
-.social-login {
+.social-login,
+.social-signup {
   display: flex;
   justify-content: center;
   gap: 20px;
@@ -186,7 +199,7 @@ input:focus {
   }
 
   .illustration-container {
-    padding: 20px;
+    display: none;
   }
 
   .form-container {

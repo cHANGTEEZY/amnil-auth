@@ -3,9 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>signup - Mofitask</title>
-    <link rel="stylesheet" href="signup.css" />
-    <link rel="stylesheet" href="./global.css" />
+    <title>Login</title>
+    <link rel="stylesheet" href="auth.css" />
+    <link rel="stylesheet" href="../style.css" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
@@ -20,15 +20,15 @@
   </head>
   <body>
     <div class="container">
-      <div class="signup-card">
+      <div class="login-card">
         <div class="illustration-container">
-          <div class="logo">Mofitask.</div>
+          <div class="logo">Amnil Technology.</div>
         </div>
 
         <div class="form-container">
-          <h1>signup</h1>
+          <h1>Login</h1>
 
-          <form id="signup-form">
+          <form id="login-form" method="get">
             <div class="form-group">
               <label for="email">Email</label>
               <div class="input-container">
@@ -40,6 +40,7 @@
                   id="email"
                   name="email"
                   placeholder="sushank@gmail.com"
+                  required
                 />
               </div>
             </div>
@@ -59,47 +60,29 @@
               </div>
             </div>
 
-            <div class="form-group">
-              <label for="confirm-password">Confirm Password</label>
-              <div class="input-container">
-                <span class="input-icon">
-                  <i class="fa-solid fa-key"></i>
-                </span>
-                <input
-                  type="password"
-                  id="confirm-password"
-                  name="confirm-password"
-                  placeholder="********"
-                />
-              </div>
+            <div class="forgot-password">
+              <a href="#">Forgot Password?</a>
             </div>
 
-            <button type="submit" class="signup-button">Sign up</button>
+            <button type="submit" id="submit" class="login-button">
+              Log In
+            </button>
           </form>
 
           <div class="divider">
             <span>Or Continue With</span>
           </div>
 
-          <div class="social-signup">
-            <button type="button" class="social-button google">
-              <img
-                src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"
-                alt="Google logo"
-              />
-            </button>
-            <button type="button" class="social-button facebook">
-              <img
-                src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg"
-                alt="Facebook logo"
-              />
-            </button>
-            <button type="button" class="social-button apple">
-              <img
-                src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg"
-                alt="Apple logo"
-              />
-            </button>
+          <div class="social-login">
+            <span class="social-button google">
+              <i class="fa-brands fa-google"></i>
+            </span>
+            <span class="social-button facebook">
+              <i class="fa-brands fa-facebook"></i>
+            </span>
+            <span class="social-button apple">
+              <i class="fa-brands fa-apple"></i>
+            </span>
           </div>
 
           <p class="signup-link">
@@ -108,5 +91,6 @@
         </div>
       </div>
     </div>
+    <script src="../modules/signin.js" type="MODULE"></script>
   </body>
 </html>
