@@ -5,6 +5,18 @@
       "email": "finaltest@gmail.com",
       "password": "ASDASD",
       "confirmPassword": "ASDASD"
+    },
+    {
+      "id": "a07a",
+      "email": "hello@gmail.com",
+      "password": "ASDASD",
+      "confirmPassword": "ASDASD"
+    },
+    {
+      "id": "4d9e",
+      "email": "naya@gmail.com",
+      "password": "ASDASD",
+      "confirmPassword": "ASDASD"
     }
   ]
 }

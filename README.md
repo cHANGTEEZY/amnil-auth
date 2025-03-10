@@ -42,6 +42,8 @@ This project simulates user creation, login, and protected homepage access using
 
 1.  **Start JSON Server:**
 
+    json-server --watch db.json
+
     Create a `db.json` file in your project root with the following structure:
 
     ```json
@@ -79,4 +81,3 @@ This project simulates user creation, login, and protected homepage access using
 4.  **Logout:**
     - A logout button will be provided on the homepage.
     - Clicking the logout button will remove the token from local storage and redirect you to the login page.
-
