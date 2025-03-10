@@ -42,8 +42,6 @@ This project simulates user creation, login, and protected homepage access using
 
 1.  **Start JSON Server:**
 
-    json-server --watch db.json
-
     Create a `db.json` file in your project root with the following structure:
 
     ```json
@@ -55,7 +53,7 @@ This project simulates user creation, login, and protected homepage access using
     Then, start JSON Server:
 
     ```bash
-    npx json-server --watch db.json
+     json-server --watch db.json
     ```
 
     This will start the JSON Server on `http://localhost:3000`.
