@@ -1,3 +1,10 @@
 {
-  "user": []
+  "user": [
+    {
+      "id": "ee01",
+      "email": "finaltest@gmail.com",
+      "password": "ASDASD",
+      "confirmPassword": "ASDASD"
+    }
+  ]
 }
