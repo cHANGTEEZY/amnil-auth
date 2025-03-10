@@ -5,15 +5,6 @@
   font-family: sans-serif;
 }
 
-.welcome {
-  text-align: center;
-  background-image: url("/welcome.jpg");
-  height: 100vh;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -39,7 +30,6 @@
   object-fit: cover;
 }
 
-/* Logout button style */
 .logout-button {
   padding: 8px 15px;
   background-color: #f44336;
@@ -52,4 +42,22 @@
 
 .logout-button:hover {
   background-color: #d32f2f;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.welcome {
+  font-size: 5rem;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+  text-shadow: 0 0 5px #312c31, 0 0 10px #302c30, 0 0 20px #141214,
+    0 0 40px #111011, 0 0 80px #222022, 0 0 90px #1d1d1d, 0 0 100px #000000;
 }
