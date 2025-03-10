@@ -46,7 +46,7 @@ This project simulates user creation, login, and protected homepage access using
 
     ```json
     {
-      "users": []
+      "user": []
     }
     ```
 
