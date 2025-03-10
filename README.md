@@ -28,8 +28,8 @@ This project simulates user creation, login, and protected homepage access using
 1.  Clone the repository:
 
     ```bash
-    git clone <repository_url>
-    cd <project_directory>
+    git clone https://github.com/cHANGTEEZY/amnil-auth.git
+    cd amnil-auth
     ```
 
 2.  Install dependencies:
