@@ -10,22 +10,15 @@ const checkUserExist = async (email) => {
       }
     );
 
-    if (response.ok) {
-      const data = await response.json();
-      if (data.length > 0) {
-        console.log("User exists:", data);
-        return true;
-      } else {
-        console.log("User does not exist");
-        return false;
-      }
-    } else {
-      console.error("Failed to check user existence:", response.statusText);
-      return false;
+    if (!response.ok) {
+      throw new Error(`Failed to check user existence: ${response.statusText}`);
     }
+
+    const data = await response.json();
+    return data.length > 0 ? data[0] : null;
   } catch (error) {
     console.error("Error:", error);
-    return false;
+    throw new Error("Error checking user existence. Please try again.");
   }
 };
 

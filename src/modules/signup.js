@@ -13,19 +13,26 @@ submit.addEventListener("click", async (e) => {
   e.preventDefault();
   submit.disabled = true;
   submit.innerText = "Creating User";
-  const formData = signUpFormData();
 
+  const formData = signUpFormData();
   if (!formData) {
     alert("Invalid form data. Please fill out all required fields.");
+    submit.disabled = false;
+    submit.innerText = "Sign Up";
     return;
   }
+
   try {
-    const userExist = await checkUserExist(formData.email);
-    if (userExist) {
+    const existingUser = await checkUserExist(formData.email);
+    if (existingUser) {
       alert("User with the given email already exists.");
+      submit.disabled = false;
+      submit.innerText = "Sign Up";
       return;
     }
-    alert(await createUser(formData));
+
+    const createUserResponse = await createUser(formData);
+    alert(createUserResponse);
     window.location.href = "http://127.0.0.1:5500/src/pages/signin.html";
   } catch (error) {
     console.error("Error during signup:", error);
