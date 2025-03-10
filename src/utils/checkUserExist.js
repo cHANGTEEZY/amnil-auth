@@ -1,7 +1,9 @@
+console.log("url", import.meta.env.VITE_API_URL);
+
 const checkUserExist = async (email) => {
   try {
     const response = await fetch(
-      `http://localhost:3000/user?email=${encodeURIComponent(email)}`,
+      `${import.meta.env.VITE_API_URL}/user?email=${encodeURIComponent(email)}`,
       {
         method: "GET",
         headers: {

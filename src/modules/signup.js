@@ -6,7 +6,7 @@ const submit = document.getElementById("submit");
 
 const token = localStorage.getItem("token");
 if (token) {
-  window.location.href = "http://127.0.0.1:5500/";
+  window.location.href = "http://localhost:5173";
 }
 
 submit.addEventListener("click", async (e) => {
@@ -33,7 +33,7 @@ submit.addEventListener("click", async (e) => {
 
     const createUserResponse = await createUser(formData);
     alert(createUserResponse);
-    window.location.href = "http://127.0.0.1:5500/src/pages/signin.html";
+    window.location.href = "http://localhost:5173/signin.html";
   } catch (error) {
     console.error("Error during signup:", error);
     alert(error.message || "Something went wrong. Please try again.");

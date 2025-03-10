@@ -1,20 +1,14 @@
 {
   "user": [
     {
-      "id": "ee01",
-      "email": "finaltest@gmail.com",
+      "id": "307d",
+      "email": "gg@gmail.com",
       "password": "ASDASD",
       "confirmPassword": "ASDASD"
     },
     {
-      "id": "a07a",
-      "email": "hello@gmail.com",
-      "password": "ASDASD",
-      "confirmPassword": "ASDASD"
-    },
-    {
-      "id": "4d9e",
-      "email": "naya@gmail.com",
+      "id": "b743",
+      "email": "new@gmail.com",
       "password": "ASDASD",
       "confirmPassword": "ASDASD"
     }

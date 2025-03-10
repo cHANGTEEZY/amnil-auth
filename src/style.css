@@ -7,7 +7,7 @@
 
 .welcome {
   text-align: center;
-  background-image: url("/public/welcome.jpg");
+  background-image: url("/welcome.jpg");
   height: 100vh;
   background-position: center;
   background-repeat: no-repeat;

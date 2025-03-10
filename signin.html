@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="form.css" />
+    <link rel="stylesheet" href="./src/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <section class="container">
+      <div class="login-card">
+        <div class="illustration-container">
+          <div class="logo">Amnil Technology.</div>
+        </div>
+
+        <div class="form-container">
+          <h1>Login</h1>
+
+          <form id="login-form" method="get">
+            <div class="form-group">
+              <label for="email">Email</label>
+              <div class="input-container">
+                <span class="input-icon">
+                  <i class="fa-solid fa-envelope"></i>
+                </span>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="sushank@gmail.com"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="password">Password</label>
+              <div class="input-container">
+                <span class="input-icon">
+                  <i class="fa-solid fa-key"></i>
+                </span>
+                <input
+                  type="password"
+                  id="password"
+                  name="password"
+                  placeholder="********"
+                />
+              </div>
+              <span>
+                <a href="http://localhost:5173/forgotPassword.html"
+                  >forgotPassword</a
+                >
+              </span>
+            </div>
+
+            <button type="submit" id="submit" class="login-button">
+              Log In
+            </button>
+          </form>
+
+          <div class="divider">
+            <span>Or Continue With</span>
+          </div>
+
+          <div class="social-login">
+            <span class="social-button google">
+              <i class="fa-brands fa-google"></i>
+            </span>
+            <span class="social-button facebook">
+              <i class="fa-brands fa-facebook"></i>
+            </span>
+            <span class="social-button apple">
+              <i class="fa-brands fa-apple"></i>
+            </span>
+          </div>
+
+          <p class="signup-link">
+            Don't have an account? <a href="signup.html">Sign Up here</a>
+          </p>
+        </div>
+      </div>
+    </section>
+    <script src="./src/modules/signin.js" type="MODULE"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
+  </body>
+</html>

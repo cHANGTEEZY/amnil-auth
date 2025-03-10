@@ -1,9 +1,7 @@
 const authenticate = async (formData) => {
-  const URL = "http://localhost:3000/user";
-
   try {
     const response = await fetch(
-      `${URL}?email=${encodeURIComponent(
+      `${import.meta.env.VITE_API_URL}/user?email=${encodeURIComponent(
         formData.email
       )}&password=${encodeURIComponent(formData.password)}`,
       {
@@ -22,8 +20,6 @@ const authenticate = async (formData) => {
     if (data.length === 0) {
       throw new Error("User with given credentials does not exist");
     }
-    alert("Logging in");
-
     localStorage.setItem("token", data[0].id);
     window.location.href = "/";
   } catch (error) {

@@ -5,7 +5,7 @@ const signIn = document.getElementById("submit");
 
 const token = localStorage.getItem("token");
 if (token) {
-  window.location.href = "http://127.0.0.1:5500/";
+  window.location.href = "http://localhost:5173";
 }
 
 signIn.addEventListener("click", async (e) => {
