@@ -13,7 +13,6 @@ const checkUserExist = async (email) => {
     if (!response.ok) {
       throw new Error(`Failed to check user existence: ${response.statusText}`);
     }
-
     const data = await response.json();
     return data.length > 0 ? data[0] : null;
   } catch (error) {
