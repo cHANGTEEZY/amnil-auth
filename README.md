@@ -80,4 +80,3 @@ This project simulates user creation, login, and protected homepage access using
     - A logout button will be provided on the homepage.
     - Clicking the logout button will remove the token from local storage and redirect you to the login page.
 
-## Project Structure
