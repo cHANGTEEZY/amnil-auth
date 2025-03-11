@@ -11,7 +11,7 @@ const validateSignInData = (email, password) => {
     errors.push("enter password");
   }
 
-  return errors.length > 0 ? errors : "valid data";
+  return errors.length > 0 ? errors : "";
 };
 
 export default validateSignInData;

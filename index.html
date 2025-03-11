@@ -2,11 +2,27 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <!-- <link rel="icon" type="image/svg+xml" href="/vite.svg" /> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <title>Amnil auth App</title>
     <link rel="stylesheet" href="./src/style.css" />
     <link rel="stylesheet" href="./src/css/navbar.css" />
+    <script>
+      const token = localStorage.getItem("token");
+      const currentPath = window.location.pathname;
+      if (
+        token &&
+        (currentPath.includes("signin.html") ||
+          currentPath.includes("signup.html"))
+      ) {
+        window.location.href = "/";
+      } else if (
+        !token &&
+        !currentPath.includes("signin.html") &&
+        !currentPath.includes("signup.html")
+      ) {
+        window.location.href = "/src/html/signin.html";
+      }
+    </script>
   </head>
   <body>
     <header>
@@ -21,7 +37,6 @@
     <main>
       <h1 class="welcome">Welcome</h1>
     </main>
-    <script src="./src/js/components/header.js"></script>
-    <script type="module" src="./src/main.js"></script>
+    <script src="./src/js/components/header.js" type="module"></script>
   </body>
 </html>

@@ -1,14 +1,19 @@
-import validatePassword from "../utils/validate";
+import validatePassword from "../utils/validateSignUpData.js";
 
 const signUpFormData = () => {
   const email = document.getElementById("email").value;
   const password = document.getElementById("password").value;
   const confirmPassword = document.getElementById("confirm-password").value;
 
-  const errors = validatePassword(email, password, confirmPassword);
+  const errorsDiv = document.getElementById("errors");
+  errorsDiv.innerHTML = "";
 
-  if (Array.isArray(errors) && errors.length > 0) {
-    alert(errors.join("\n"));
+  const errors = validatePassword(email, password, confirmPassword);
+  const span = document.createElement("span");
+  span.innerHTML = errors;
+
+  if (errors.length > 0) {
+    errorsDiv.appendChild(span);
     return;
   }
 

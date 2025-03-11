@@ -230,3 +230,10 @@ input:focus {
     height: 40px;
   }
 }
+
+.errors {
+  color: red;
+  display: grid;
+  gap: 5px;
+  margin-bottom: 1rem;
+}

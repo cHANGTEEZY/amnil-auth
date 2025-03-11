@@ -21,7 +21,7 @@ const validatePassword = (email, password, confirmPassword) => {
     errors.push("Passwords do not match.");
   }
 
-  return errors.length > 0 ? errors : "valid data";
+  return errors.length > 0 ? errors : "";
 };
 
 export default validatePassword;

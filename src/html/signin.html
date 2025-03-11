@@ -14,6 +14,24 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="../css/navbar.css" />
+
+    <script>
+      const token = localStorage.getItem("token");
+      const currentPath = window.location.pathname;
+      if (
+        token &&
+        (currentPath.includes("signin.html") ||
+          currentPath.includes("signup.html"))
+      ) {
+        window.location.href = "/";
+      } else if (
+        !token &&
+        !currentPath.includes("signin.html") &&
+        !currentPath.includes("signup.html")
+      ) {
+        window.location.href = "/src/html/signin.html";
+      }
+    </script>
   </head>
   <body>
     <header>
@@ -70,6 +88,8 @@
               Log In
             </button>
           </form>
+          <div id="errors" class="errors"></div>
+          <div id="signin-error" class="errors"></div>
 
           <div class="divider">
             <span>Or Continue With</span>
@@ -93,8 +113,8 @@
         </div>
       </div>
     </section>
-    <script src="../js/components/header.js"></script>
     <script src="../js/modules/signin.js" type="module"></script>
+    <script src="../js/components/header.js" type="module"></script>
     <script
       type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/toastify-js"

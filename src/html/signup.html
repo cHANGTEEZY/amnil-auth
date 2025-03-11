@@ -14,6 +14,23 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="../css/navbar.css" />
+    <script>
+      const token = localStorage.getItem("token");
+      const currentPath = window.location.pathname;
+      if (
+        token &&
+        (currentPath.includes("signin.html") ||
+          currentPath.includes("signup.html"))
+      ) {
+        window.location.href = "/";
+      } else if (
+        !token &&
+        !currentPath.includes("signin.html") &&
+        !currentPath.includes("signup.html")
+      ) {
+        window.location.href = "/src/html/signin.html";
+      }
+    </script>
   </head>
   <body>
     <header>
@@ -46,7 +63,6 @@
                   id="email"
                   name="email"
                   placeholder="sushank@gmail.com"
-                  required
                 />
               </div>
             </div>
@@ -80,7 +96,8 @@
                 />
               </div>
             </div>
-
+            <div id="errors" class="errors"></div>
+            <div id="signup-error" class="errors"></div>
             <button type="submit" class="signup-button" id="submit">
               Sign up
             </button>
@@ -108,8 +125,8 @@
         </div>
       </div>
     </section>
-    <script src="../js/components/header.js"></script>
-    <script src="../js/modules/signin.js" type="module"></script>
+    <script src="../js/components/header.js" type="module"></script>
+    <script src="../js/modules/signup.js" type="module"></script>
     <script
       type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/toastify-js"

@@ -1,17 +1,29 @@
 import { defineConfig } from "vite";
 
 export default defineConfig({
-  base: "",
-
+  base: "./",
   build: {
     outDir: "dist",
-
     rollupOptions: {
       input: {
         main: "index.html",
-        signin: "src/html/signin.html",
         signup: "src/html/signup.html",
+        signin: "src/html/signin.html",
+      },
+      output: {
+        entryFileNames: "assets/[name].js",
+        chunkFileNames: "assets/[name].js",
+        assetFileNames: "assets/[name][extname]",
       },
     },
+  },
+  resolve: {
+    alias: {
+      "@": "/src",
+    },
+  },
+
+  preview: {
+    port: 5173,
   },
 });

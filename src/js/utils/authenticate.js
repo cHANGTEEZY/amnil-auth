@@ -18,13 +18,15 @@ const authenticate = async (formData) => {
 
     const data = await response.json();
     if (data.length === 0) {
-      throw new Error("User with given credentials does not exist");
+      throw new Error("Invalid email or password");
     }
+
     localStorage.setItem("token", data[0].id);
     window.location.href = "/";
+    return "Logging in";
   } catch (error) {
-    alert(error.message);
-    console.error(error.message || "Something went wrong");
+    console.error(error.message);
+    return error.message;
   }
 };
 
