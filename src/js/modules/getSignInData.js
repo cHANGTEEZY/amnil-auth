@@ -1,4 +1,4 @@
-import validateSignInData from "../utils/validateSigninData.js";
+import validateSignInData from "../utils/validateSigninData";
 
 const signInFormData = () => {
   const email = document.getElementById("email").value;

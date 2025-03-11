@@ -1,11 +1,12 @@
 import signInFormData from "./getSignInData.js";
+
 import authenticate from "../utils/authenticate.js";
 
 const signIn = document.getElementById("submit");
 
 const token = localStorage.getItem("token");
 if (token) {
-  window.location.href = "http://localhost:5173";
+  window.location.href = "/"; // Use root path instead of hardcoded URL
 }
 
 signIn.addEventListener("click", async (e) => {

@@ -1,4 +1,4 @@
-import validatePassword from "../utils/validate.js";
+import validatePassword from "../utils/validate";
 
 const signUpFormData = () => {
   const email = document.getElementById("email").value;

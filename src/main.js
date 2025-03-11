@@ -1,15 +1,25 @@
+// Check if user is logged in
 const checkIfUserIsLoggedIn = () => {
   const token = localStorage.getItem("token");
-  if (!token) {
-    window.location.href = "http://localhost:5173/signin.html";
+  const currentPath = window.location.pathname;
+  if (
+    !token &&
+    !currentPath.includes("/signin.html") &&
+    !currentPath.includes("/signup.html")
+  ) {
+    window.location.href = "/src/html/signin.html";
+    return false;
   }
+  return true;
 };
 
-checkIfUserIsLoggedIn();
+if (checkIfUserIsLoggedIn()) {
+  const logout = document.getElementById("logout");
 
-const logout = document.getElementById("logout");
-
-logout.addEventListener("click", () => {
-  localStorage.removeItem("token");
-  window.location.reload();
-});
+  if (logout) {
+    logout.addEventListener("click", () => {
+      localStorage.removeItem("token");
+      window.location.href = "/src/html/signin.html";
+    });
+  }
+}
