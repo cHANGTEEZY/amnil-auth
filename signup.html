@@ -13,8 +13,18 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link rel="stylesheet" href="./src/css/navbar.css" />
   </head>
   <body>
+    <header>
+      <nav class="navbar">
+        <div class="logo">MyApp</div>
+        <div class="dropdown">
+          <button class="dropbtn">Menu</button>
+          <div class="dropdown-content" id="auth-buttons"></div>
+        </div>
+      </nav>
+    </header>
     <section class="container">
       <div class="signup-card">
         <div class="illustration-container">
@@ -98,6 +108,7 @@
         </div>
       </div>
     </section>
+    <script src="./src/components/header.js"></script>
     <script src="./src/modules/signup.js" type="MODULE"></script>
     <script
       type="text/javascript"
