@@ -1,7 +1,7 @@
 const authenticate = async (formData) => {
   try {
     const response = await fetch(
-      `${import.meta.env.VITE_API_URL}/user?email=${encodeURIComponent(
+      `https://delightful-persistent-fowl.glitch.me/user?email=${encodeURIComponent(
         formData.email
       )}&password=${encodeURIComponent(formData.password)}`,
       {
