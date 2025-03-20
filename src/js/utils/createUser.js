@@ -2,7 +2,7 @@
 const createUser = async (formData) => {
   try {
     const response = await fetch(
-      `https://delightful-persistent-fowl.glitch.me/user`,
+      `https://delightful-persistent-fowl.glitch.me/users`,
       {
         method: "POST",
         headers: {

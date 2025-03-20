@@ -1,7 +1,7 @@
 const checkUserExist = async (email) => {
   try {
     const response = await fetch(
-      `https://delightful-persistent-fowl.glitch.me/user?email=${encodeURIComponent(
+      `https://delightful-persistent-fowl.glitch.me/users?email=${encodeURIComponent(
         email
       )}`,
       {
