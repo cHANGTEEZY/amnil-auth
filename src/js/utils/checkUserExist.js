@@ -3,7 +3,9 @@ import { BASE_URL } from "../global/baseApi";
 const checkUserExist = async (email) => {
   try {
     const response = await fetch(
-      `${BASE_URL}/users?email=${encodeURIComponent(email)}`,
+      `https://delightful-persistent-fowl.glitch.me/users?email=${encodeURIComponent(
+        email
+      )}`,
       {
         method: "GET",
         headers: {
