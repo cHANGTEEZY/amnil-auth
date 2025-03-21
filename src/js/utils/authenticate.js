@@ -1,7 +1,9 @@
+import { BASE_URL } from "../global/baseApi";
+
 const authenticate = async (formData) => {
   try {
     const response = await fetch(
-      `https://delightful-persistent-fowl.glitch.me/users?email=${encodeURIComponent(
+      `${BASE_URL}/users?email=${encodeURIComponent(
         formData.email
       )}&password=${encodeURIComponent(formData.password)}`,
       {
